@@ -27,7 +27,6 @@ class CardGameTest < MiniTest::Test
     assert_equal(expected, actual)
   end
 
-
   def test_highest_card____card1
     expected = @ten
     actual = @cardgame.highest_card(@ten, @ace)

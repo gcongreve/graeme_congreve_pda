@@ -30,6 +30,7 @@ class CardGame
   #too many ends - should only be 2.
   #card, on 3rd line, is undefined - should be card1 or card2
   #the return is explicit on line 3 and implicit on line 5
+  #if 2 cards have the same value it returns one of the cards instead of nil. 
   dif highest_card(card1 card2)
   if card1.value > card2.value
     return card.name
