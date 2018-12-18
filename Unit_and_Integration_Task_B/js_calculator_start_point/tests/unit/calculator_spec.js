@@ -12,12 +12,19 @@ describe('calculator', function () {
   })
 
   it('it should be able to add numbers', function() {
-    calculator.numberClick(1)
-    calculator.operatorClick('+')
-    calculator.add(4)
-    actual = calculator.runningTotal
-    assert.equal(actual, 5)
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.add(4);
+    actual = calculator.runningTotal;
+    assert.equal(actual, 5);
   })
 
+  it('it should be able to subtract numbers', function() {
+    calculator.numberClick(7)
+    calculator.operatorClick('-')
+    calculator.subtract(4)
+    actual = calculator.runningTotal;
+    assert.equal(actual, 3)
+  })
 
 });
