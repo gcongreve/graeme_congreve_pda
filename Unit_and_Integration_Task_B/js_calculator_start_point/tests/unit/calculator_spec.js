@@ -11,4 +11,13 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('it should be able to add numbers', function() {
+    calculator.numberClick(1)
+    calculator.operatorClick('+')
+    calculator.add(4)
+    actual = calculator.runningTotal
+    assert.equal(actual, 5)
+  })
+
+
 });
