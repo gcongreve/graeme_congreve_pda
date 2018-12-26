@@ -42,6 +42,7 @@ describe('calculator', function () {
     actual = calculator.runningTotal;
     assert.equal(actual, 3);
   });
+  
 
 
 });
