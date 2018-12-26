@@ -16,4 +16,11 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
+  it('should be able to concatenate multiple number button clicks', function () {
+    running_total = element(by.css('#running_total'));
+    element(by.css('#number5')).click();
+    element(by.css('#number9')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('59');
+  })
+
 });
