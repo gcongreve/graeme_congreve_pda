@@ -20,11 +20,19 @@ describe('calculator', function () {
   })
 
   it('it should be able to subtract numbers', function() {
-    calculator.numberClick(7)
-    calculator.operatorClick('-')
-    calculator.subtract(4)
+    calculator.numberClick(7);
+    calculator.operatorClick('-');
+    calculator.subtract(4);
     actual = calculator.runningTotal;
     assert.equal(actual, 3)
+  })
+
+  it('it should be able to muliply numbers', function () {
+    calculator.numberClick(3);
+    calculator.operatorClick('*');
+    calculator.multiply(5);
+    actual = calculator.runningTotal;
+    assert.equal(actual, 15)
   })
 
 });
