@@ -14,7 +14,8 @@ describe('calculator', function () {
   it('it should be able to add numbers', function() {
     calculator.numberClick(1);
     calculator.operatorClick('+');
-    calculator.add(4);
+    calculator.numberClick(4);
+    calculator.operatorClick('=');
     actual = calculator.runningTotal;
     assert.equal(actual, 5);
   });
@@ -22,7 +23,8 @@ describe('calculator', function () {
   it('it should be able to subtract numbers', function() {
     calculator.numberClick(7);
     calculator.operatorClick('-');
-    calculator.subtract(4);
+    calculator.numberClick(4);
+    calculator.operatorClick('=');
     actual = calculator.runningTotal;
     assert.equal(actual, 3)
   });
@@ -30,7 +32,8 @@ describe('calculator', function () {
   it('it should be able to muliply numbers', function () {
     calculator.numberClick(3);
     calculator.operatorClick('*');
-    calculator.multiply(5);
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
     actual = calculator.runningTotal;
     assert.equal(actual, 15);
   });
@@ -38,7 +41,8 @@ describe('calculator', function () {
   it('it should be able to divide numbers', function () {
     calculator.numberClick(21);
     calculator.operatorClick('/');
-    calculator.divide(7);
+    calculator.numberClick(7);
+    calculator.operatorClick('=');
     actual = calculator.runningTotal;
     assert.equal(actual, 3);
   });
